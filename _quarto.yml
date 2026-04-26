@@ -1,0 +1,7 @@
+project:
+  title: "Slides"
+  type: website
+  output-dir: docs
+
+editor: visual
+output-dir: docs

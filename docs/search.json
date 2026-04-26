@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "Atividade05.html#o-que-a-anova-clássica-testa",
+    "href": "Atividade05.html#o-que-a-anova-clássica-testa",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "O que a ANOVA clássica testa",
+    "text": "O que a ANOVA clássica testa\n\nObjetivo: comparar médias de \\(k\\) grupos\nHipóteses:\n\n\\[\n\\begin{cases}\nH_0: & \\mu_1 = \\mu_2 = \\text{. . .} = \\mu_k, \\text{ para }\\,k &gt; 2 \\\\\nH_1: & \\text{pelo menos uma média difere}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "Atividade05.html#estatística-de-teste-anova",
+    "href": "Atividade05.html#estatística-de-teste-anova",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Estatística de Teste (ANOVA)",
+    "text": "Estatística de Teste (ANOVA)\n\\[\nF_0 = \\frac{MQG}{MQE} \\sim F_{(k - 1, \\, N - 1)}\n\\]\nOnde:\n\n\\(MQG = \\frac{\\sum_{i\\,=\\,1}^{k} n_i \\left( \\bar{X}_{i\\,\\textbf{.}} - \\bar{X}_{\\textbf{..}} \\right)^2}{k - 1}\\)\n\\(MQE = \\frac{\\sum_{i\\,=\\,i}^k \\sum_{j\\,=\\,1}^{n_i} \\left( \\bar{X}_{ij} - \\bar{X}_{i\\, \\textbf{.}} \\right)^2}{n\\,-\\,k}\\)\nDistribuição: \\(F \\text{ de Snedecor}\\)"
+  },
+  {
+    "objectID": "Atividade05.html#suposições-da-anova",
+    "href": "Atividade05.html#suposições-da-anova",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Suposições da ANOVA",
+    "text": "Suposições da ANOVA\n\nIndependência das observações\nAmostras normalmente distribuídas\nHomocedasticidade (homogeneidade de variâncias)"
+  },
+  {
+    "objectID": "Atividade05.html#teste-de-tukey-comparações-múltiplas",
+    "href": "Atividade05.html#teste-de-tukey-comparações-múltiplas",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Teste de Tukey (comparações múltiplas)",
+    "text": "Teste de Tukey (comparações múltiplas)\nEstatística de teste:\n\\[\nq = \\frac{\\left| \\bar{X}_i - \\bar{X}_j \\right|}{\\sqrt{\\frac{MQE}{n}}}\n\\]\nPara tamanhos desiguais:\n\\[\nq = \\frac{\\left| \\bar{X}_i - \\bar{X}_j \\right|}{\\sqrt{\\frac{MQE}{2}\\left(\\frac{1}{n_i} + \\frac{1}{n_j}\\right)}}\n\\]"
+  },
+  {
+    "objectID": "Atividade05.html#ideia-da-anova-de-welch",
+    "href": "Atividade05.html#ideia-da-anova-de-welch",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Ideia da ANOVA de Welch",
+    "text": "Ideia da ANOVA de Welch\n\nRemove suposição de homocedasticidade\nUsa variâncias individuais\nGeneraliza ANOVA clássica"
+  },
+  {
+    "objectID": "Atividade05.html#pesos-de-welch",
+    "href": "Atividade05.html#pesos-de-welch",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Pesos de Welch",
+    "text": "Pesos de Welch\n\\[\nw_i = \\frac{n_i}{s_i^2}\n\\]\n\nQuanto maior a variância, menor o peso\nQuanto menor a variância, maior o peso"
+  },
+  {
+    "objectID": "Atividade05.html#média-ponderada",
+    "href": "Atividade05.html#média-ponderada",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Média ponderada",
+    "text": "Média ponderada\n\\[\n\\hat{\\mu} = \\frac{\\sum w_i \\bar{X}_i}{\\sum w_i}\n\\]"
+  },
+  {
+    "objectID": "Atividade05.html#estatística-de-welch-forma-geral",
+    "href": "Atividade05.html#estatística-de-welch-forma-geral",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Estatística de Welch (forma geral)",
+    "text": "Estatística de Welch (forma geral)\n\\[\nF_W = \\frac{\\dfrac{\\sum w_i (\\bar{X}_i - \\hat{\\mu})^2}{k - 1}}{1 + \\left[\\frac{2(k - 2)}{k^2 - 1}\\right]\\sum h_i}\n\\]\nOnde:\n\n\\(w_i = \\frac{n_i}{s_i^2}\\)\n\\(\\hat{\\mu} = \\frac{\\sum w_i \\bar{X}_i}{\\sum w_i}\\)\n\\(h_i = \\frac{(1 - w_i / W)^2}{n_i - 1}\\)\n\\(W = \\sum w_i\\)"
+  },
+  {
+    "objectID": "Atividade05.html#graus-de-liberdade-ajustados",
+    "href": "Atividade05.html#graus-de-liberdade-ajustados",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Graus de liberdade ajustados",
+    "text": "Graus de liberdade ajustados\n\nWelch–Satterthwaite approximation\n\n\\[\n\\nu \\approx \\frac{\\left(\\sum w_i\\right)^2}{\\sum \\frac{w_i^2}{n_i - 1}}\n\\]"
+  },
+  {
+    "objectID": "Atividade05.html#ideia-geral",
+    "href": "Atividade05.html#ideia-geral",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Ideia geral",
+    "text": "Ideia geral\n\nVersão robusta do Tukey\nBaseado na lógica de Welch\nPara comparações múltiplas com heterocedasticidade"
+  },
+  {
+    "objectID": "Atividade05.html#estatística-de-teste",
+    "href": "Atividade05.html#estatística-de-teste",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Estatística de teste",
+    "text": "Estatística de teste\n\\[\nq_{ij} = \\frac{\\left| \\bar{X}_i - \\bar{X}_j \\right|}{\\sqrt{\\frac{s_i^2}{n_i} + \\frac{s_j^2}{n_j}}}\n\\]"
+  },
+  {
+    "objectID": "Atividade05.html#graus-de-liberdade",
+    "href": "Atividade05.html#graus-de-liberdade",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Graus de liberdade",
+    "text": "Graus de liberdade\n\\[\n\\nu_{ij} \\approx \\frac{\\left( \\frac{s_i^2}{n_i} + \\frac{s_j^2}{n_j} \\right)^2}{\\frac{\\left( \\frac{s_i^2}{n_i} \\right)^2}{n_i - 1} + \\frac{\\left( \\frac{s_j^2}{n_j} \\right)^2}{n_j - 1}}\n\\]"
+  },
+  {
+    "objectID": "Atividade05.html#resumo-conceitual",
+    "href": "Atividade05.html#resumo-conceitual",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Resumo conceitual",
+    "text": "Resumo conceitual\n\nComparações tipo Welch\nVariâncias diferentes permitidas\nSem estimativa conjunta de variância\nControle do erro tipo I"
+  },
+  {
+    "objectID": "Atividade05.html#referências",
+    "href": "Atividade05.html#referências",
+    "title": "PRÁTICA ESTATÍSTICA II",
+    "section": "Referências",
+    "text": "Referências\n\nNCSS, LLC. One-Way Analysis of Variance. NCSS Statistical Software Documentation, 2026.\nFARIAS, Ana Maria Lima de; KUBRUSLY, Jéssica Quintanilha; SOUZA, Mariana Albi de Oliveira. Probabilidade e variáveis aleatórias: teoria e prática. Rio de Janeiro: Ciência Moderna, 2024."
+  }
+]

@@ -1,0 +1,154 @@
+---
+title: "**PRÁTICA ESTATÍSTICA II**"
+subtitle: "**ATIVIDADE AVALIATIVA 5**"
+author: "Pedro Perusse (<pedromaria@id.uff.br>) <br> Ramon Dias (<ramontdm@id.uff.br>)"
+date: today
+date-format: "DD/MM/YYYY"
+institute: "Universidade Federal Fluminense"
+format:
+  revealjs:
+    css: custom.css
+    slide-number: true
+    incremental: false
+    transition: slide
+    background-transition: fade
+    width: 1280
+    height: 720
+    margin: 0.07
+    auto-stretch: false
+    title-slide-attributes:
+      data-background-image: "images/Capa.png"
+      data-background-size: cover
+---
+
+# **CONTEXTO**
+
+## O que a ANOVA clássica testa
+
+ - Objetivo: comparar médias de $k$ grupos
+ - Hipóteses:
+ 
+$$
+\begin{cases}
+H_0: & \mu_1 = \mu_2 = \text{. . .} = \mu_k, \text{ para }\,k > 2 \\
+H_1: & \text{pelo menos uma média difere}
+\end{cases}
+$$
+
+## Estatística de Teste (ANOVA)
+
+$$
+F_0 = \frac{MQG}{MQE} \sim F_{(k - 1, \, N - 1)}
+$$
+
+Onde:
+
+ - $MQG = \frac{\sum_{i\,=\,1}^{k} n_i \left( \bar{X}_{i\,\textbf{.}} - \bar{X}_{\textbf{..}} \right)^2}{k - 1}$
+ 
+ - $MQE = \frac{\sum_{i\,=\,i}^k \sum_{j\,=\,1}^{n_i} \left( \bar{X}_{ij} - \bar{X}_{i\, \textbf{.}} \right)^2}{n\,-\,k}$
+
+ - Distribuição: $F \text{ de Snedecor}$
+ 
+## Suposições da ANOVA
+ 
+ - Independência das observações
+ - Amostras normalmente distribuídas
+ - Homocedasticidade (homogeneidade de variâncias)
+ 
+## Teste de Tukey (comparações múltiplas)
+ 
+Estatística de teste: 
+
+$$
+q = \frac{\left| \bar{X}_i - \bar{X}_j \right|}{\sqrt{\frac{MQE}{n}}}
+$$
+ 
+Para tamanhos desiguais:
+
+$$
+q = \frac{\left| \bar{X}_i - \bar{X}_j \right|}{\sqrt{\frac{MQE}{2}\left(\frac{1}{n_i} + \frac{1}{n_j}\right)}}
+$$
+ 
+# **ANOVA DE WELCH**
+
+## Ideia da ANOVA de Welch
+
+ - Remove suposição de homocedasticidade
+ - Usa variâncias individuais
+ - Generaliza ANOVA clássica
+ 
+## Pesos de Welch
+
+$$
+w_i = \frac{n_i}{s_i^2}
+$$
+ 
+ - Quanto maior a variância, menor o peso
+ - Quanto menor a variância, maior o peso
+ 
+## Média ponderada
+
+$$
+\hat{\mu} = \frac{\sum w_i \bar{X}_i}{\sum w_i}
+$$
+ 
+## Estatística de Welch (forma geral)
+
+$$
+F_W = \frac{\dfrac{\sum w_i (\bar{X}_i - \hat{\mu})^2}{k - 1}}{1 + \left[\frac{2(k - 2)}{k^2 - 1}\right]\sum h_i}
+$$
+
+Onde:
+
+ - $w_i = \frac{n_i}{s_i^2}$
+ - $\hat{\mu} = \frac{\sum w_i \bar{X}_i}{\sum w_i}$
+ - $h_i = \frac{(1 - w_i / W)^2}{n_i - 1}$
+ - $W = \sum w_i$
+ 
+## Graus de liberdade ajustados
+
+ - Welch–Satterthwaite approximation
+ 
+$$
+\nu \approx \frac{\left(\sum w_i\right)^2}{\sum \frac{w_i^2}{n_i - 1}}
+$$
+
+# **TESTE DE GAMES–HOWELL**
+
+## Ideia geral
+
+ - Versão robusta do Tukey
+ - Baseado na lógica de Welch
+ - Para comparações múltiplas com heterocedasticidade
+
+## Estatística de teste
+
+$$
+q_{ij} = \frac{\left| \bar{X}_i - \bar{X}_j \right|}{\sqrt{\frac{s_i^2}{n_i} + \frac{s_j^2}{n_j}}}
+$$
+
+## Graus de liberdade
+
+$$
+\nu_{ij} \approx \frac{\left( \frac{s_i^2}{n_i} + \frac{s_j^2}{n_j} \right)^2}{\frac{\left( \frac{s_i^2}{n_i} \right)^2}{n_i - 1} + \frac{\left( \frac{s_j^2}{n_j} \right)^2}{n_j - 1}}
+$$
+
+## Resumo conceitual
+
+ - Comparações tipo Welch
+ - Variâncias diferentes permitidas
+ - Sem estimativa conjunta de variância
+ - Controle do erro tipo I
+ 
+## Referências
+
+ - NCSS, LLC. *One-Way Analysis of Variance*. NCSS Statistical Software Documentation, 2026.
+ 
+ - FARIAS, Ana Maria Lima de; KUBRUSLY, Jéssica Quintanilha; SOUZA, Mariana Albi de Oliveira. *Probabilidade e variáveis aleatórias: teoria e prática*. Rio de Janeiro: Ciência Moderna, 2024.
+
+
+
+
+
+
+
