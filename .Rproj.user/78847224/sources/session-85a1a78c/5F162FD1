@@ -3,7 +3,7 @@
     "path": "~/UFF/Disciplinas-por-semestre/6/pratica_II/Atividade05/Atividade05.qmd",
     "project_path": "Atividade05.qmd",
     "type": "quarto_markdown",
-    "hash": "124437612",
+    "hash": "1265034453",
     "contents": "",
     "dirty": false,
     "created": 1777143488519.0,
@@ -17,15 +17,15 @@
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
         "rmdVisualModeLocation": "2:0",
-        "cursorPosition": "2,35",
-        "scrollLine": "0"
+        "cursorPosition": "146,199",
+        "scrollLine": "143"
     },
     "folds": "",
-    "lastKnownWriteTime": 1777246172,
+    "lastKnownWriteTime": 1777248116,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1777246172366,
+    "last_content_update": 1777248116392,
     "read_only": false,
     "read_only_alternatives": []
 }

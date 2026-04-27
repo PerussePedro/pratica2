@@ -144,7 +144,7 @@ $$
 
  - NCSS, LLC. *One-Way Analysis of Variance*. NCSS Statistical Software Documentation, 2026.
  
- - FARIAS, Ana Maria Lima de; KUBRUSLY, Jéssica Quintanilha; SOUZA, Mariana Albi de Oliveira. *Probabilidade e variáveis aleatórias: teoria e prática*. Rio de Janeiro: Ciência Moderna, 2024.
+ - FARIAS, Ana Maria Lima de; DEMARQUI, Fábio Nogueira. Apostila de Estatística II. Niterói: Universidade Federal Fluminense, Instituto de Matemática e Estatística, Departamento de Estatística, 2017.
 
 
 
